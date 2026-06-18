@@ -1,0 +1,246 @@
+.projects {
+  min-height: 100vh;
+  background: #f7f8fc;
+  padding: 100px 8%;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.header span {
+  color: #6366f1;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.header h1 {
+  font-size: 48px;
+  margin: 15px 0;
+  color: #111827;
+}
+
+.header p {
+  color: #6b7280;
+  max-width: 650px;
+  margin:auto;
+  line-height:1.7;
+}
+
+.projectGrid{
+  display:grid;
+  grid-template-columns:
+  repeat(
+    auto-fit,
+    minmax(
+      350px,
+      1fr
+    )
+  );
+
+  gap:35px;
+}
+
+.card{
+
+  background:white;
+
+  border-radius:30px;
+
+  overflow:hidden;
+
+  transition:.4s;
+
+  box-shadow:
+  0 10px 30px
+  rgba(
+    0,
+    0,
+    0,
+    .05
+  );
+}
+
+.card:hover{
+
+transform:
+translateY(-10px);
+
+box-shadow:
+0 20px 40px
+rgba(
+0,
+0,
+0,
+0.1
+);
+
+}
+
+.imageContainer{
+
+position:relative;
+
+height:250px;
+overflow:hidden;
+}
+
+.image{
+
+object-fit:cover;
+
+transition:.6s;
+}
+
+.card:hover .image{
+
+transform:scale(
+1.08
+);
+
+}
+
+.status{
+
+position:absolute;
+
+top:15px;
+right:15px;
+
+background:white;
+
+padding:
+8px 16px;
+
+border-radius:30px;
+
+font-size:12px;
+
+font-weight:600;
+
+box-shadow:
+0 5px 20px
+rgba(
+0,
+0,
+0,
+0.1
+);
+
+}
+
+.content{
+
+padding:28px;
+}
+
+.category{
+
+color:#6366f1;
+
+font-size:14px;
+
+font-weight:600;
+
+margin-bottom:10px;
+}
+
+.content h2{
+
+font-size:26px;
+
+margin-bottom:15px;
+
+color:#111827;
+}
+
+.description{
+
+line-height:1.7;
+
+color:#6b7280;
+
+margin-bottom:20px;
+}
+
+.techStack{
+
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+
+margin-bottom:25px;
+}
+
+.tech{
+
+padding:
+8px 14px;
+
+border-radius:30px;
+
+background:#eef2ff;
+
+color:#4f46e5;
+
+font-size:13px;
+
+font-weight:500;
+}
+
+.buttons{
+
+display:flex;
+gap:15px;
+}
+
+.buttons a{
+
+flex:1;
+
+padding:14px;
+
+text-align:center;
+
+border-radius:15px;
+
+text-decoration:none;
+
+font-weight:600;
+
+transition:.3s;
+}
+
+.buttons a:first-child{
+
+background:#6366f1;
+color:white;
+}
+
+.buttons a:last-child{
+
+border:
+1px solid
+#d1d5db;
+
+color:#111827;
+}
+
+.buttons a:hover{
+
+transform:
+translateY(-3px);
+}
+
+@media(max-width:768px){
+
+.header h1{
+font-size:36px;
+}
+
+.projects{
+padding:80px 20px;
+}
+
+}

@@ -1,0 +1,161 @@
+/* app/_Component/Navbar.module.css */
+
+.navbar {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 92%;
+  max-width: 1200px;
+
+  z-index: 1000;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+  transition: 0.3s ease;
+}
+
+.navbar:hover {
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.35),
+    0 0 25px rgba(59, 130, 246, 0.25);
+}
+
+.navbarContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 18px 32px;
+}
+
+.logo {
+  text-decoration: none;
+
+  font-size: 1.8rem;
+  font-weight: 700;
+
+  color: #ffffff;
+
+  letter-spacing: 1px;
+
+  transition: 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.03);
+}
+
+.highlight {
+  color: #38bdf8;
+}
+
+.navMenu {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.navLink {
+  position: relative;
+
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.85);
+
+  font-size: 1rem;
+  font-weight: 500;
+
+  transition: 0.3s ease;
+}
+
+.navLink::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+
+  width: 0%;
+  height: 2px;
+
+  border-radius: 10px;
+
+  background: linear-gradient(to right, #38bdf8, #818cf8);
+
+  transition: width 0.3s ease;
+}
+
+.navLink:hover {
+  color: #ffffff;
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+.contactBtn {
+  text-decoration: none;
+
+  padding: 10px 22px;
+
+  border-radius: 50px;
+
+  color: white;
+
+  font-weight: 600;
+  font-size: 0.95rem;
+
+  background: linear-gradient(135deg, #38bdf8, #6366f1);
+
+  box-shadow:
+    0 4px 15px rgba(56, 189, 248, 0.35),
+    0 0 12px rgba(99, 102, 241, 0.2);
+
+  transition: all 0.3s ease;
+}
+
+.contactBtn:hover {
+  transform: translateY(-2px) scale(1.03);
+
+  box-shadow:
+    0 8px 20px rgba(56, 189, 248, 0.45),
+    0 0 20px rgba(99, 102, 241, 0.35);
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .navbar {
+    width: 95%;
+    top: 12px;
+  }
+
+  .navbarContainer {
+    flex-direction: column;
+    gap: 18px;
+
+    padding: 20px;
+  }
+
+  .navMenu {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+}

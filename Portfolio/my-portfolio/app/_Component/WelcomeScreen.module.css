@@ -1,0 +1,269 @@
+/* app/_Component/WelcomeScreen.module.css */
+
+.screen {
+  position: fixed;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background: linear-gradient(
+    to bottom right,
+    #020617,
+    #0f172a,
+    #111827
+  );
+
+  z-index: 9999;
+}
+
+/* =========================
+   BLUR EFFECTS
+========================= */
+
+.blurOne,
+.blurTwo {
+  position: absolute;
+
+  border-radius: 50%;
+
+  filter: blur(120px);
+
+  opacity: 0.25;
+}
+
+.blurOne {
+  width: 320px;
+  height: 320px;
+
+  background: #38bdf8;
+
+  top: -80px;
+  left: -80px;
+
+  animation: float 6s ease-in-out infinite;
+}
+
+.blurTwo {
+  width: 280px;
+  height: 280px;
+
+  background: #8b5cf6;
+
+  bottom: -80px;
+  right: -80px;
+
+  animation: float 7s ease-in-out infinite;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.content {
+  position: relative;
+  z-index: 2;
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.logoWrapper {
+  position: relative;
+
+  margin-bottom: 24px;
+}
+
+.logoGlow {
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  background: linear-gradient(
+    135deg,
+    #38bdf8,
+    #8b5cf6
+  );
+
+  border-radius: 50%;
+
+  filter: blur(90px);
+
+  opacity: 0.45;
+
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.logo {
+  position: relative;
+
+  font-size: 5rem;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  color: white;
+
+  animation: fadeUp 1s ease forwards;
+}
+
+.logo span {
+  background: linear-gradient(
+    to right,
+    #38bdf8,
+    #818cf8
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.role {
+  color: rgba(255, 255, 255, 0.75);
+
+  font-size: 1.2rem;
+
+  margin-bottom: 40px;
+
+  letter-spacing: 1px;
+
+  animation: fadeUp 1.3s ease forwards;
+}
+
+/* =========================
+   LOADER
+========================= */
+
+.loader {
+  width: 260px;
+  height: 8px;
+
+  border-radius: 999px;
+
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  margin-bottom: 16px;
+
+  backdrop-filter: blur(10px);
+}
+
+.loaderBar {
+  width: 0%;
+
+  height: 100%;
+
+  border-radius: 999px;
+
+  background: linear-gradient(
+    90deg,
+    #38bdf8,
+    #6366f1
+  );
+
+  animation: loading 3s linear forwards;
+}
+
+.loadingText {
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 0.95rem;
+
+  letter-spacing: 1px;
+
+  animation: fadeUp 1.5s ease forwards;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes loading {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(1.08);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .logo {
+    font-size: 3.5rem;
+  }
+
+  .role {
+    font-size: 1rem;
+  }
+
+  .loader {
+    width: 220px;
+  }
+
+  .logoGlow {
+    width: 140px;
+    height: 140px;
+  }
+}
