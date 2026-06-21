@@ -36,7 +36,7 @@ export default function Home() {
             </Link>
 
             <a
-              href="/resume.pdf"
+              href="/sameer-resume.pdf "
               download
               className={styles.secondaryBtn}
             >
