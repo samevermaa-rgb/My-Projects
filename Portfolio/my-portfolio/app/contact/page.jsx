@@ -40,7 +40,7 @@ export default function Contact() {
     try {
 
       const response = await fetch(
-        "http://my-projects-2wvq.onrender.com/api/contact",
+        "https://backend-xy1s.onrender.com/api/contact",
         {
           method: "POST",
 

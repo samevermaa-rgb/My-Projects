@@ -60,7 +60,7 @@ export default function RegisterPage() {
     try {
 
       const response = await fetch(
-        "http://my-projects-2wvq.onrender.com/api/users/register",
+        "https://backend-xy1s.onrender.com/api/users/register",
         {
           method: "POST",
 

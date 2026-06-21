@@ -67,7 +67,7 @@ export default function LoginPage() {
     }
 
     const response = await fetch(
-      "http://my-projects-2wvq.onrender.com/api/users/login",
+      "https://backend-xy1s.onrender.com/api/users/login",
       {
         method: "POST",
         headers: {
