@@ -23,7 +23,9 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin:  "https://sv-admincontrol.vercel.app",
+    origin:[ "https://sv-admincontrol.vercel.app",
+    "https://sv-portfolio-sooty.vercel.app"],
+
     methods: [
       "GET",
       "POST",
@@ -49,7 +51,7 @@ app.use(
 
 app.use(
   "/api/projects",
-   projectRoutes
+  projectRoutes
 )
 
 app.use(
