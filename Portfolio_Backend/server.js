@@ -23,7 +23,7 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin:[ "https://my-projects-phi-six.vercel.app/",
+    origin:[ "https://my-projects-phi-six.vercel.app",
     "https://sv-portfolio-sooty.vercel.app"],
 
     methods: [
