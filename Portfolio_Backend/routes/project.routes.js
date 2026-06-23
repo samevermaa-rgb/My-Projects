@@ -1,6 +1,7 @@
 const express = require("express");
 const auth = require("../middleware/auth.middleware")
 const admin = require("../middleware/admin.middleware")
+const upload = require("../middleware/upload.middleware")
 
 const {
   getProjectCount,
@@ -13,11 +14,12 @@ const {
 const router =
   express.Router();
 
-router.get(
-  "/count",
+router.post(
+  "/",
   auth,
   admin,
-  getProjectCount
+  upload.array("screenshots", 5),
+  createProject
 );
 
 router.get(

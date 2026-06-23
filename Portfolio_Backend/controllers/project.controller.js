@@ -11,9 +11,9 @@ const getProjectCount = async (
       await Project.countDocuments();
 
     res.status(200).json({
-      success: true,
-      count,
-    });
+  success: true,
+  totalProjects: count,
+});
   } catch (error) {
     res.status(500).json({
       success: false,
