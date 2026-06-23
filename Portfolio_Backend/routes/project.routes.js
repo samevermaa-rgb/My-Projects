@@ -1,4 +1,6 @@
 const express = require("express");
+const auth = require("../middleware/auth.middleware")
+const admin = require("../middleware/admin.middleware")
 
 const {
   getProjectCount,
@@ -13,16 +15,22 @@ const router =
 
 router.get(
   "/count",
+  auth,
+  admin,
   getProjectCount
 );
 
 router.get(
   "/",
+  auth,
+  admin,
   getProjects
 );
 
 router.post(
   "/",
+  auth,
+  admin,
   createProject
 );
 

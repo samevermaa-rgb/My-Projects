@@ -1,6 +1,9 @@
 const express =
 require("express");
 
+const auth = require("../middleware/auth.middleware")
+const admin = require("../middleware/admin.middleware")
+
 const router =
 express.Router();
 
@@ -12,6 +15,8 @@ const {
 
 router.get(
   "/count",
+  auth,
+  admin,
   getMessageCount
 );
 
