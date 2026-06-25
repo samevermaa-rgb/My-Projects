@@ -16,23 +16,20 @@ const router =
 
 router.post(
   "/",
-  auth,
-  admin,
+  
   upload.array("screenshots", 5),
   createProject
 );
 
 router.get(
   "/",
-  auth,
-  admin,
+  
   getProjects
 );
 
 router.post(
   "/",
-  auth,
-  admin,
+  
   createProject
 );
 

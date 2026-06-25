@@ -44,10 +44,13 @@ export default function Projects() {
         const response =
           await fetch(
             `${process.env.NEXT_PUBLIC_API_URL}/api/projects`,
+            
             {
               method: "GET",
-              cache: "no-store"
+              cache: "no-store",
+              
             }
+            
           );
 
         if (!response.ok) {
